@@ -19,6 +19,15 @@ buildscript {
     }
 }
 
+gradlePlugin {
+    plugins {
+        create("gradle-git-changelog") {
+            id = "gradle-git-changelog"
+            implementationClass = "com.selesse.gradle.git.changelog.GitLogPlugin"
+        }
+    }
+}
+
 repositories {
     mavenCentral()
 }
